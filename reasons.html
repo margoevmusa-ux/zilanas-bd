@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>100 причин ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    overflow-x:hidden;
+    color:white;
+
+}
+
+
+/* Сердечки */
+
+.hearts{
+
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+
+}
+
+
+.hearts span{
+
+    position:absolute;
+    bottom:-50px;
+    color:rgba(255,255,255,.35);
+    font-size:22px;
+    animation:float  linear infinite;
+
+}
+
+
+.hearts span:nth-child(1){
+left:5%;
+animation-duration:10s;
+}
+
+.hearts span:nth-child(2){
+left:15%;
+animation-duration:15s;
+}
+
+.hearts span:nth-child(3){
+left:25%;
+animation-duration:12s;
+}
+
+.hearts span:nth-child(4){
+left:35%;
+animation-duration:18s;
+}
+
+.hearts span:nth-child(5){
+left:45%;
+animation-duration:13s;
+}
+
+.hearts span:nth-child(6){
+left:55%;
+animation-duration:17s;
+}
+
+.hearts span:nth-child(7){
+left:65%;
+animation-duration:11s;
+}
+
+.hearts span:nth-child(8){
+left:75%;
+animation-duration:16s;
+}
+
+.hearts span:nth-child(9){
+left:85%;
+animation-duration:14s;
+}
+
+.hearts span:nth-child(10){
+left:95%;
+animation-duration:20s;
+}
+
+
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+opacity:0;
+
+}
+
+
+20%{
+
+opacity:.5;
+
+}
+
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+
+}
+
+}
+
+
+
+/* Заголовок */
+
+
+.title{
+
+text-align:center;
+padding-top:45px;
+
+}
+
+
+.title h1{
+
+font-size:48px;
+margin-bottom:15px;
+
+}
+
+
+.title p{
+
+font-size:22px;
+
+}
+
+
+/* Сетка карточек */
+
+
+.container{
+
+width:90%;
+max-width:1200px;
+margin:50px auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fill,minmax(120px,1fr));
+
+gap:20px;
+
+}
+
+
+
+/* Карточка */
+
+
+.reason{
+
+height:120px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:32px;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.2);
+
+}
+
+
+.reason:hover{
+
+transform:scale(1.08);
+
+background:rgba(255,255,255,.25);
+
+}
+
+/* Открытая карточка */
+
+.popup{
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.75);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+z-index:10;
+
+animation:fade .3s;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+.popup-card{
+
+width:700px;
+max-width:90%;
+
+min-height:400px;
+
+background:white;
+
+color:#ff4f81;
+
+border-radius:30px;
+
+padding:50px;
+
+text-align:center;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.4);
+
+animation:open .4s;
+
+}
+
+
+
+@keyframes open{
+
+from{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+
+
+.popup-card h2{
+
+font-size:40px;
+
+margin-bottom:30px;
+
+}
+
+
+
+.popup-card p{
+
+font-size:25px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+
+
+.close{
+
+margin-top:40px;
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ff4f81;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.close:hover{
+
+transform:scale(1.08);
+
+}
+
+
+
+.next{
+
+display:flex;
+
+justify-content:center;
+
+margin:50px 0 70px;
+
+}
+
+
+
+.next button{
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#ff4f81;
+
+font-size:22px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.next button:hover{
+
+transform:scale(1.08);
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="hearts">
+
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+
+</div>
+
+
+
+<div class="title">
+
+<h1>
+💖 100 причин, почему я тебя люблю
+</h1>
+
+<p>
+Каждая карточка — маленькая часть моей любви к тебе ❤️
+</p>
+
+</div>
+
+
+
+<div class="container" id="container">
+    <div class="reason" onclick="openReason(1)">
+❤️ 1
+</div>
+
+<div class="reason" onclick="openReason(2)">
+❤️ 2
+</div>
+
+<div class="reason" onclick="openReason(3)">
+❤️ 3
+</div>
+
+<div class="reason" onclick="openReason(4)">
+❤️ 4
+</div>
+
+<div class="reason" onclick="openReason(5)">
+❤️ 5
+</div>
+
+<div class="reason" onclick="openReason(6)">
+❤️ 6
+</div>
+
+<div class="reason" onclick="openReason(7)">
+❤️ 7
+</div>
+
+<div class="reason" onclick="openReason(8)">
+❤️ 8
+</div>
+
+<div class="reason" onclick="openReason(9)">
+❤️ 9
+</div>
+
+<div class="reason" onclick="openReason(10)">
+❤️ 10
+</div>
+
+
+<div class="reason" onclick="openReason(11)">
+❤️ 11
+</div>
+
+<div class="reason" onclick="openReason(12)">
+❤️ 12
+</div>
+
+<div class="reason" onclick="openReason(13)">
+❤️ 13
+</div>
+
+<div class="reason" onclick="openReason(14)">
+❤️ 14
+</div>
+
+<div class="reason" onclick="openReason(15)">
+❤️ 15
+</div>
+
+
+<div class="reason" onclick="openReason(16)">
+❤️ 16
+</div>
+
+<div class="reason" onclick="openReason(17)">
+❤️ 17
+</div>
+
+<div class="reason" onclick="openReason(18)">
+❤️ 18
+</div>
+
+<div class="reason" onclick="openReason(19)">
+❤️ 19
+</div>
+
+<div class="reason" onclick="openReason(20)">
+❤️ 20
+</div>
+
+
+<div class="reason" onclick="openReason(21)">
+❤️ 21
+</div>
+
+<div class="reason" onclick="openReason(22)">
+❤️ 22
+</div>
+
+<div class="reason" onclick="openReason(23)">
+❤️ 23
+</div>
+
+<div class="reason" onclick="openReason(24)">
+❤️ 24
+</div>
+
+<div class="reason" onclick="openReason(25)">
+❤️ 25
+</div>
+
+<div class="reason" onclick="openReason(26)">
+❤️ 26
+</div>
+
+<div class="reason" onclick="openReason(27)">
+❤️ 27
+</div>
+
+<div class="reason" onclick="openReason(28)">
+❤️ 28
+</div>
+
+<div class="reason" onclick="openReason(29)">
+❤️ 29
+</div>
+
+<div class="reason" onclick="openReason(30)">
+❤️ 30
+</div>
+
+
+<div class="reason" onclick="openReason(31)">
+❤️ 31
+</div>
+
+<div class="reason" onclick="openReason(32)">
+❤️ 32
+</div>
+
+<div class="reason" onclick="openReason(33)">
+❤️ 33
+</div>
+
+<div class="reason" onclick="openReason(34)">
+❤️ 34
+</div>
+
+<div class="reason" onclick="openReason(35)">
+❤️ 35
+</div>
+
+
+<div class="reason" onclick="openReason(36)">
+❤️ 36
+</div>
+
+<div class="reason" onclick="openReason(37)">
+❤️ 37
+</div>
+
+<div class="reason" onclick="openReason(38)">
+❤️ 38
+</div>
+
+<div class="reason" onclick="openReason(39)">
+❤️ 39
+</div>
+
+<div class="reason" onclick="openReason(40)">
+❤️ 40
+</div>
+
+
+<div class="reason" onclick="openReason(41)">
+❤️ 41
+</div>
+
+<div class="reason" onclick="openReason(42)">
+❤️ 42
+</div>
+
+<div class="reason" onclick="openReason(43)">
+❤️ 43
+</div>
+
+<div class="reason" onclick="openReason(44)">
+❤️ 44
+</div>
+
+<div class="reason" onclick="openReason(45)">
+❤️ 45
+</div>
+
+
+<div class="reason" onclick="openReason(46)">
+❤️ 46
+</div>
+
+<div class="reason" onclick="openReason(47)">
+❤️ 47
+</div>
+
+<div class="reason" onclick="openReason(48)">
+❤️ 48
+</div>
+
+<div class="reason" onclick="openReason(49)">
+❤️ 49
+</div>
+
+<div class="reason" onclick="openReason(50)">
+❤️ 50
+</div>
+
+<div class="reason" onclick="openReason(51)">
+❤️ 51
+</div>
+
+<div class="reason" onclick="openReason(52)">
+❤️ 52
+</div>
+
+<div class="reason" onclick="openReason(53)">
+❤️ 53
+</div>
+
+<div class="reason" onclick="openReason(54)">
+❤️ 54
+</div>
+
+<div class="reason" onclick="openReason(55)">
+❤️ 55
+</div>
+
+
+<div class="reason" onclick="openReason(56)">
+❤️ 56
+</div>
+
+<div class="reason" onclick="openReason(57)">
+❤️ 57
+</div>
+
+<div class="reason" onclick="openReason(58)">
+❤️ 58
+</div>
+
+<div class="reason" onclick="openReason(59)">
+❤️ 59
+</div>
+
+<div class="reason" onclick="openReason(60)">
+❤️ 60
+</div>
+
+
+<div class="reason" onclick="openReason(61)">
+❤️ 61
+</div>
+
+<div class="reason" onclick="openReason(62)">
+❤️ 62
+</div>
+
+<div class="reason" onclick="openReason(63)">
+❤️ 63
+</div>
+
+<div class="reason" onclick="openReason(64)">
+❤️ 64
+</div>
+
+<div class="reason" onclick="openReason(65)">
+❤️ 65
+</div>
+
+
+<div class="reason" onclick="openReason(66)">
+❤️ 66
+</div>
+
+<div class="reason" onclick="openReason(67)">
+❤️ 67
+</div>
+
+<div class="reason" onclick="openReason(68)">
+❤️ 68
+</div>
+
+<div class="reason" onclick="openReason(69)">
+❤️ 69
+</div>
+
+<div class="reason" onclick="openReason(70)">
+❤️ 70
+</div>
+
+
+<div class="reason" onclick="openReason(71)">
+❤️ 71
+</div>
+
+<div class="reason" onclick="openReason(72)">
+❤️ 72
+</div>
+
+<div class="reason" onclick="openReason(73)">
+❤️ 73
+</div>
+
+<div class="reason" onclick="openReason(74)">
+❤️ 74
+</div>
+
+<div class="reason" onclick="openReason(75)">
+❤️ 75
+</div>
+
+<div class="reason" onclick="openReason(76)">
+❤️ 76
+</div>
+
+<div class="reason" onclick="openReason(77)">
+❤️ 77
+</div>
+
+<div class="reason" onclick="openReason(78)">
+❤️ 78
+</div>
+
+<div class="reason" onclick="openReason(79)">
+❤️ 79
+</div>
+
+<div class="reason" onclick="openReason(80)">
+❤️ 80
+</div>
+
+
+<div class="reason" onclick="openReason(81)">
+❤️ 81
+</div>
+
+<div class="reason" onclick="openReason(82)">
+❤️ 82
+</div>
+
+<div class="reason" onclick="openReason(83)">
+❤️ 83
+</div>
+
+<div class="reason" onclick="openReason(84)">
+❤️ 84
+</div>
+
+<div class="reason" onclick="openReason(85)">
+❤️ 85
+</div>
+
+
+<div class="reason" onclick="openReason(86)">
+❤️ 86
+</div>
+
+<div class="reason" onclick="openReason(87)">
+❤️ 87
+</div>
+
+<div class="reason" onclick="openReason(88)">
+❤️ 88
+</div>
+
+<div class="reason" onclick="openReason(89)">
+❤️ 89
+</div>
+
+<div class="reason" onclick="openReason(90)">
+❤️ 90
+</div>
+
+
+<div class="reason" onclick="openReason(91)">
+❤️ 91
+</div>
+
+<div class="reason" onclick="openReason(92)">
+❤️ 92
+</div>
+
+<div class="reason" onclick="openReason(93)">
+❤️ 93
+</div>
+
+<div class="reason" onclick="openReason(94)">
+❤️ 94
+</div>
+
+<div class="reason" onclick="openReason(95)">
+❤️ 95
+</div>
+
+
+<div class="reason" onclick="openReason(96)">
+❤️ 96
+</div>
+
+<div class="reason" onclick="openReason(97)">
+❤️ 97
+</div>
+
+<div class="reason" onclick="openReason(98)">
+❤️ 98
+</div>
+
+<div class="reason" onclick="openReason(99)">
+❤️ 99
+</div>
+
+<div class="reason" onclick="openReason(100)">
+❤️ 100
+</div>
+
+
+</div>
+<!-- Окно открытой причины -->
+
+<div class="popup" id="popup">
+
+<div class="popup-card">
+
+
+<h2 id="reasonTitle">
+❤️ Причина №1
+</h2>
+
+
+<p id="reasonText">
+
+Напиши здесь свою причину любви ❤️
+
+</p>
+
+
+<button class="close" onclick="closeReason()">
+
+Закрыть ❤️
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<div class="next">
+
+<button onclick="goQuestions()">
+
+Перейти к вопросам ❤️
+
+</button>
+
+</div>
+
+<!-- Окно причины -->
+
+<div class="popup">
+
+<div class="popup-card">
+
+<h2>
+❤️ Причина №1
+</h2>
+
+<p>
+Место для твоего текста.
+<br><br>
+
+Здесь ты напишешь, почему ты её любишь ❤️
+
+</p>
+
+<button class="close">
+Закрыть ❤️
+</button>
+
+</div>
+
+</div>
+
+
+
+
+<style>
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    justify-content:center;
+    align-items:center;
+    z-index:100;
+}
+
+
+.popup-card{
+
+    width:700px;
+    max-width:90%;
+
+    background:white;
+    color:#ff4f81;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    animation:openCard .4s;
+
+}
+
+
+@keyframes openCard{
+
+from{
+    transform:scale(.5);
+    opacity:0;
+}
+
+to{
+    transform:scale(1);
+    opacity:1;
+}
+
+}
+
+
+.popup-card h2{
+
+font-size:40px;
+margin-bottom:30px;
+
+}
+
+
+.popup-card p{
+
+font-size:24px;
+line-height:1.8;
+color:#555;
+
+}
+
+
+.close{
+
+margin-top:30px;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff4f81;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+}
+
+
+</style>
+
+
+<!-- Здесь можно менять свои причины -->
+
+<div id="texts">
+
+
+
+
+</div>
+
+<!-- Карточки будут открывать свои причины -->
+
+<script>
+
+const cards = document.querySelectorAll(".reason");
+
+const popup = document.querySelector(".popup");
+
+const popupTitle = document.querySelector(".popup-card h2");
+
+const popupText = document.querySelector(".popup-card p");
+
+const closeButton = document.querySelector(".close");
+
+
+const myReasons = [
+
+"Твоя шикарная улыбка, от которой я таю. ❤️",
+
+"Твои большие, красивые и милые глазки. ❤️",
+
+"твои охуенно красивые волосы, в которые хочется нырнуть. ❤️",
+
+"За твои сисюльки. ❤️",
+
+"За то, что ты пишешь свою собственную книгу, как по мне, это очень мило и круто. ❤️",
+
+"За то, что ты всегда кo всем  добрая. ❤️",
+
+"За твое особенное отношение ко мне. Ты ко мне относишься намного лучше, чем к другим. ❤️",
+
+"За твое 'иди нахуй' или 'заебал' которые ощущаются, как 'я люблю тебя'. ❤️",
+
+"За твое тонкое чувство юмора. ❤️",
+
+"За твои отвратительные пошлые и чёрные шутки, которые даже сатана бы не придумал. ❤️",
+
+"За твои подъебы. ❤️",
+
+"За то, что тебе нравится мой внутренний ребенок. ❤️",
+
+"За твой сложный характер, из-за которого хочется ещё сильнее тебя добиваться.  ❤️",
+
+"За то, что ты увлекаешься машинами. ❤️",
+
+"за то, что ты играла в две самые мои любимые игры. ❤️",
+
+"за то, что ты рассказываешь мне всё. ❤️",
+
+"За то, что с тобой всегда очень весело сплетничать, потому что ты такой пидорасик. ❤️",
+
+"За тренд, который ты еще давным давно повторила из ТикТока, но я не забыл. ❤️",
+
+"за твой уровень доверия ко мне. ❤️",
+
+"За твой уровень честности ко мне. ❤️",
+
+
+"За твое, а 'ты меня любишь?' ❤️",
+
+"За то, что ты всегда исправляешь каждую мою грамматическую ошибку. Из за этого можно и обуздать хорошо язык ❤️",
+
+"за то, что ты всегда много учишься и всегда стараешься, это говорит о многом. ❤️",
+
+"за то маленькое сердечко, которое ты кидаешь каждый раз, когда желаешь сладких снов. ❤️",
+
+"за то, как ты радуешься каждый раз, когда я тебе делаю комплимент какой-нибудь.",
+
+
+"Когда ты меня ласково называешь, например, Мусюсюпичка и Муся.",
+
+"За то, что ты хранишь все мои подарки, которые я тебе подарил в Телеграм. ❤️",
+
+"За то когда ты мне сильно ебёшь мозги. ❤️",
+
+"За тот прикол, который ты сделала с мизинцем. ❤️",
+
+"За твою любовь, к животным. ❤️",
+
+
+"Я хуй его знает почему, но за твои насмешки. ❤️",
+
+"За все те сообщения, которые ты закрепляешь. ❤️",
+
+"Если ты сейчас это читаешь, то знай, что я тебя очень сильно люблю. ❤️",
+
+"За то, что имя мое помнишь, с твоей то дырявой памяти. ❤️",
+
+"За твою забывчивость. ❤️",
+
+
+"За твои ахуительные липсинги. ❤️",
+
+"За твой возбуждающий взгляд. ❤️",
+
+"За твой музыкальный вкус. ❤️",
+
+"всё в твоей внешности, без каких либо исключений. ❤️",
+
+"За твои красивые и аккуратные брови. ❤️",
+
+
+"За твои ахуительно красивые брови. ❤️",
+
+"За твои пухлые ахуенные губы, которые прям через экран хочется засосать. ❤️",
+
+"За все стихотворения, которые ты пишешь. Это очень круто. В наше время почти никто этим не занимается. ❤️",
+
+"за тот ситх, который ты мне написала. ❤️",
+
+"за твой игнор, звучит странно но что то в этом есть ❤️",
+
+
+"за то что ты выкупаешь любой мой рофл ❤️",
+
+"за то что тебе нравится мой рофл до такой степени что каждая моя шутка в закрепе ❤️",
+
+"за шутки про мать ❤️",
+
+"за то что ты умнее всех вумен которых я встречал ❤️",
+
+"за твое первое я люблю тебя ❤️",
+
+".за то что тебе нравится мой музыкальный вкус ❤️",
+
+".за то сколько у нас всего общего ❤️",
+
+"за твою попку) ❤️",
+
+"и еще бляяяяяяять я таак теку по твоей фигуре ты просто не представляешь ❤️",
+
+"за то что ты мне обещала скинуть сиськи 6го сентября(напоминание) ❤️",
+
+
+"за то какой ты милый пидарасик ❤️",
+
+"когда ты называешь меня пидорасиком ❤️",
+
+"за наш огонек ❤️",
+
+"еще люблю за наш брак в ирисе хотя эти суки 3 раза канал поменяли ❤️",
+
+"за тот бот который ты нашла, ну который еще позволяет мне тебя обнимать ❤️",
+
+
+"за твой ангельский сука голос, записывай гс часто ❤️",
+
+"за твой смех, я и щас переодически переслушиваю когда скучаю по тебе ❤️",
+
+".за то с какой заботой ты ко мне относишься ❤️",
+
+"за то как сильно ты меня ценишь ❤️",
+
+".за то как ты хорошо относишься к чарли и феликсу ❤️",
+
+
+"за секс с твоей мамой ❤️",
+
+"СИКС СЕВЕЕЕЕЕЕН ❤️",
+
+"еще раз с днем рождения тебя ❤️",
+
+"в этой позе мы щас поебемся ❤️",
+
+"за твое умение любит, кто бы что не сказал этого у тебя не отобрать ❤️",
+
+
+"я не могу тебя обнять через экран но знай будь я с тобой задушил бы ❤️",
+
+"за твое 'МУСААААА😭😭😭😭😭😭❤️❤️❤️❤️❤️'",
+
+"за твое 'пиздец ты еблан'",
+
+".за то что ты всех мужиков гнобишь а я единственный у тебя особенный ❤️",
+
+"ну скинь сиськи пж( ❤️",
+
+
+"за твой вайб, не знаю как это обьяснить, но ты же поймешь? ❤️",
+
+"за те несколько подарков которые ты мне подарила и которые я благополучно продал) кроме одного ❤️",
+
+"за твой профиль в тг, в нем чуствуется какая то эстетика",
+
+"за сперму твоего отца ❤️",
+
+"и еще даже не смей сегодня в депрессию впадать а то отпизжу ❤️",
+"1 месяц и 8 дней. Ровно столько прошло с того дня как мы начали встречатся ❤️",
+
+"за то когда ты мне впервые сказала 'но ты мой' я об этом до конца жизни буду тебе напоминать ❤️",
+
+"зилана ты очень сильная и это мне в тебе сильно нравится, насмотря не на что ты всегда придерживаешься своих принципов ❤️",
+
+"за то как ты одеваешься, меня это очень сильно возбуждает если ты будешь всегда мне показывать я буду счастливее чем некогда ❤️",
+
+"ты знала что ты единственная девушка чье чуство юмора мне заходит? ❤️",
+
+
+"за твое 'ХФХЫХЫХФХЫХХФХЫ' ❤️",
+
+"за '50 причин почему я люблю Мусу' ❤️",
+
+"'за это я тебя люблю' это был первый раз когда я тебе это сказал ❤️",
+
+"за то как ты пидорасишься вместе со мной ❤️",
+
+"за твою любовь к моим бицепсам) ❤️",
+
+
+"приложение в котором я этот сайт делаю не пропускает полностью то что я хочу скинуть, так что по частям ❤️",
+
+"унесла река тот грустный берег ❤️",
+
+"в душе надежды больше нет ❤️",
+
+"я шла во тмье, не видя вех ❤️",
+
+"не зная где наступает расвет ❤️",
+
+
+"козалось, что ночь бессрочна ❤️",
+
+"что не сияют в небе звезды ❤️",
+
+"ты появился так нарочно ❤️",
+
+"и стали тише мрачные годы ❤️",
+
+"этот список может продолжатся еще дальше и с каждым днем он только растет, с каждым днем моя любовь к тебе только сильнее ❤️"
+
+];
+
+
+
+
+cards.forEach((card,index)=>{
+
+
+card.onclick=function(){
+
+
+popup.style.display="flex";
+
+
+popupTitle.innerHTML=
+"❤️ Причина №"+(index+1);
+
+
+popupText.innerHTML=
+myReasons[index] || 
+"Напиши здесь свою причину ❤️";
+
+
+}
+
+
+});
+
+
+
+closeButton.onclick=function(){
+
+popup.style.display="none";
+
+};
+
+
+
+</script>
+<script>
+
+
+function goQuestions(){
+
+    window.location.href="questions.html";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
+
+

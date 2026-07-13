@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9 Вопросов ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    overflow:hidden;
+}
+
+.card{
+    width:700px;
+    max-width:90%;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.progress{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+h1{
+    margin:30px 0;
+    font-size:38px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:35px;
+}
+
+button{
+    padding:16px 40px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+}
+
+.yes{
+    background:#ff4f81;
+    color:white;
+}
+
+.no{
+    background:white;
+    color:#ff4f81;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+#error{
+    margin-top:30px;
+    font-size:22px;
+    color:yellow;
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="progress" id="progress">
+Вопрос 1 из 9
+</div>
+
+<h1 id="question"></h1>
+
+<div class="buttons">
+<button class="yes" onclick="answer(true)">Да ❤️</button>
+<button class="no" onclick="answer(false)">Нет 💔</button>
+</div>
+
+<p id="error">
+❌ Неправильный ответ! Попробуй ещё раз.
+</p>
+
+</div>
+
+<script>
+
+const questions=[
+
+{
+text:"Ты счастлива со мной? ",
+correct:true
+},
+
+{
+text:"ты меня любишь?",
+correct:true
+},
+
+{
+text:"Ты сейчас улыбаешься? ",
+correct:true
+},
+
+{
+text:"Сядешь мне на лицо?)",
+correct:true
+},
+
+{
+text:"Твоя мама шлюха?",
+correct:true
+},
+
+{
+text:"Ты самая красивая девушка на свете?",
+correct:true
+},
+
+{
+text:"пришлешь мне сиськи??",
+correct:true
+},
+
+{
+text:"Тебе нравится этот подарок?",
+correct:true
+},
+
+{
+text:"Готова к последнему сюрпризу? 🎁",
+correct:true
+}
+
+];
+
+let current=0;
+
+showQuestion();
+
+function showQuestion(){
+
+document.getElementById("progress").innerHTML=
+`Вопрос ${current+1} из 9`;
+
+document.getElementById("question").innerHTML=
+questions[current].text;
+
+document.getElementById("error").style.display="none";
+
+}
+
+function answer(choice){
+
+if(choice===questions[current].correct){
+
+current++;
+
+if(current==questions.length){
+
+window.location.href="final.html";
+
+}else{
+
+showQuestion();
+
+}
+
+}else{
+
+document.getElementById("error").style.display="block";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

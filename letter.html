@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для тебя ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    overflow:hidden;
+}
+
+/* Сердечки */
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-50px;
+    color:rgba(255,255,255,.35);
+    font-size:22px;
+    animation:float linear infinite;
+}
+
+.hearts span:nth-child(1){left:5%;animation-duration:10s;}
+.hearts span:nth-child(2){left:15%;animation-duration:15s;}
+.hearts span:nth-child(3){left:25%;animation-duration:12s;}
+.hearts span:nth-child(4){left:35%;animation-duration:18s;}
+.hearts span:nth-child(5){left:45%;animation-duration:13s;}
+.hearts span:nth-child(6){left:55%;animation-duration:17s;}
+.hearts span:nth-child(7){left:65%;animation-duration:11s;}
+.hearts span:nth-child(8){left:75%;animation-duration:16s;}
+.hearts span:nth-child(9){left:85%;animation-duration:14s;}
+.hearts span:nth-child(10){left:95%;animation-duration:20s;}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+opacity:0;
+}
+
+20%{
+opacity:.5;
+}
+
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+.card{
+
+width:1100px;
+max-width:95%;
+display:flex;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+border-radius:30px;
+overflow:hidden;
+color:white;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.left{
+
+width:55%;
+padding:60px;
+
+}
+
+.left h1{
+
+font-size:48px;
+margin-bottom:25px;
+
+}
+
+.left p{
+
+font-size:22px;
+line-height:1.8;
+
+}
+
+.right{
+
+width:45%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:25px;
+
+}
+
+.photo{
+
+width:550px;
+height:100%;
+border:3px dashed rgba(255,255,255,.5);
+border-radius:25px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+text-align:center;
+line-height:1.6;
+color:white;
+
+}
+
+.zilana{
+    width: 100%;
+    height:100%;
+    border-radius: 20px;
+}
+
+.photoImage{
+
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:25px;
+
+}
+
+button{
+
+margin-top:40px;
+padding:18px 45px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4f81;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hearts">
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+<span>❤️</span>
+</div>
+
+<div class="card">
+
+<div class="left">
+
+<h1>❤️ Моей любимой Зилане</h1>
+
+<p>
+
+Моя любимая зиланочка.
+
+Я долго думал что за подарок тебе сделать,
+не хотел просто что то денежное
+хотел вложить в это свою душу и вот оно
+у меня получилось 
+и я надеюсь что тебе
+понравится то что я сделал
+потому что я вложил в это всю свою душу
+
+</p>
+
+<button onclick="nextPage()">
+
+Продолжить ❤️
+
+</button>
+
+</div>
+
+<div class="right">
+
+<div class="photo">
+
+<br>
+<img class="zilana" src="./imgs/photo_5373310005391596438_y.jpg" alt="">
+<br>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+function nextPage(){
+
+    window.location.href="memory.html";
+
+}
+
+</script>
+
+</body>
+</html>
